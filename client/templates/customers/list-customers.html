@@ -1,0 +1,26 @@
+<template name="listCustomers">
+	<div class="row">
+		<div class="col-md-12">
+			<a class="btn btn-primary" id="btnAddCustomer">Add customer</a>
+		</div>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>First name</th>
+				<th>Last name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each customers}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{surname}}</td>
+					<td>{{email}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
