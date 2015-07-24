@@ -1,14 +1,24 @@
 Template.listCustomers.onCreated(function() {
-	var currentPage = parseInt(Router.current().params.page) || 1;
-  var skipCount = (currentPage - 1) * 3; // 3 records per page
-  
-	this.subscribe('customers', skipCount);
+  var template = this;
+
+	template.autorun(function() {
+    var skipCount = (currentPage() - 1) * Meteor.settings.public.recordsPerPage;
+    template.subscribe('customers', skipCount);
+  });
 });
 
 Template.listCustomers.helpers({
 	customers: function() {
 		return Customers.find();
-	}
+	},
+  prevPage: function() {
+    var previousPage = currentPage() === 1 ? 1 : currentPage() - 1;
+    return Router.routes.listCustomers.path({page: previousPage});
+  },
+  nextPage: function() {
+    var nextPage = hasMorePages() ? currentPage() + 1 : currentPage();
+    return Router.routes.listCustomers.path({page: nextPage});
+  }
 });
 
 Template.listCustomers.events({
@@ -18,3 +28,12 @@ Template.listCustomers.events({
 		Router.go('addCustomer');
 	}
 });
+
+var hasMorePages = function() {
+  var totalCustomers = Counts.get('customerCount');
+  return currentPage() * parseInt(Meteor.settings.public.recordsPerPage) < totalCustomers;
+}
+
+var currentPage = function() {
+  return parseInt(Router.current().params.page) || 1; 
+}
