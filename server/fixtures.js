@@ -2,9 +2,9 @@
 Meteor.startup(function() {
 	if (Customers.find().count() === 0) {
 		Customers.insert({
-			name: 'Alice',
-	  	surname: 'Foster',
-	  	email: 'a.foster@example.com'
+			name: 'Fred',
+	  	surname: "Amia",
+	  	email: 'freddy@example.com'
 		});
 		Customers.insert({
 			name: 'Bob',
@@ -12,14 +12,14 @@ Meteor.startup(function() {
 	  	email: 'edelson.bob@example.com'
 		});
 		Customers.insert({
-			name: 'Cindy',
-	  	surname: 'Driver',
-	  	email: 'cindy.driver@example.com'
-		});
-		Customers.insert({
 			name: 'Dan',
 	  	surname: "Carlson",
 	  	email: 'carlsondan@example.com'
+		});
+		Customers.insert({
+			name: 'Alice',
+	  	surname: 'Foster',
+	  	email: 'a.foster@example.com'
 		});
 		Customers.insert({
 			name: 'Erica',
@@ -27,9 +27,9 @@ Meteor.startup(function() {
 	  	email: 'ericabreeson@example.com'
 		});
 		Customers.insert({
-			name: 'Fred',
-	  	surname: "Amia",
-	  	email: 'freddy@example.com'
+			name: 'Cindy',
+	  	surname: 'Driver',
+	  	email: 'cindy.driver@example.com'
 		});
 	}
 });
