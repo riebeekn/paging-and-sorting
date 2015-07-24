@@ -18,6 +18,12 @@ Template.listCustomers.helpers({
   nextPage: function() {
     var nextPage = hasMorePages() ? currentPage() + 1 : currentPage();
     return Router.routes.listCustomers.path({page: nextPage});
+  },
+  prevPageClass: function() {
+    return currentPage() <= 1 ? "disabled" : "";
+  },
+  nextPageClass: function() {
+    return hasMorePages() ? "" : "disabled";
   }
 });
 

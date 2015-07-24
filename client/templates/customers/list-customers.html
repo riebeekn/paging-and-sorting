@@ -5,6 +5,9 @@
 		</div>
 	</div>
 
+	{{#unless Template.subscriptionsReady}}
+		{{> spinner}}
+	{{/unless}}
 	<table class="table">
 		<thead>
 			<tr>

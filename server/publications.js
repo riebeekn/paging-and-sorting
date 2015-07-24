@@ -1,5 +1,4 @@
 Meteor.publish('customers', function(skipCount) {
-  Meteor._sleepForMs(2000);
   Counts.publish(this, 'customerCount', Customers.find(), { 
     noReady: true
   });
