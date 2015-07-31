@@ -9,3 +9,4 @@ iron:router
 twbs:bootstrap
 sacha:spin
 tmeasday:publish-counts
+percolate:find-from-publication

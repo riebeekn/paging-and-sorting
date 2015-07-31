@@ -9,7 +9,7 @@ Template.listCustomers.onCreated(function() {
 
 Template.listCustomers.helpers({
 	customers: function() {
-		return Customers.find();
+		return Customers.findFromPublication('customers');
 	},
   prevPage: function() {
     var previousPage = currentPage() === 1 ? 1 : currentPage() - 1;
