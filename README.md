@@ -3,7 +3,7 @@
 A simple app, demonstrating the paging and sorting in Meteor.  Companion source code for the following blog posts: 
 
 - [http://experimentsinmeteor.com/paging-and-sorting-part-1/](http://experimentsinmeteor.com/paging-and-sorting-part-1/)
-- - [http://experimentsinmeteor.com/paging-and-sorting-part-1a/](http://experimentsinmeteor.com/paging-and-sorting-part-1a/)
+- [http://experimentsinmeteor.com/paging-and-sorting-part-1a/](http://experimentsinmeteor.com/paging-and-sorting-part-1a/)
 - [http://experimentsinmeteor.com/paging-and-sorting-part-2/](http://experimentsinmeteor.com/paging-and-sorting-part-2/)
 
 ## Branches
