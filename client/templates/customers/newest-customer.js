@@ -1,5 +1,5 @@
 Template.newestCustomer.onCreated(function() {
-  this.subscribe('latestCustomer');
+  this.subscribe('newestCustomer');
 });
 
 Template.newestCustomer.helpers({
