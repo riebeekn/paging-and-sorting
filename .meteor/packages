@@ -8,3 +8,4 @@ meteor-platform
 iron:router
 twbs:bootstrap
 sacha:spin
+tmeasday:publish-counts
