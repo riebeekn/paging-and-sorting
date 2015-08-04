@@ -1,0 +1,35 @@
+<template name="addCustomer">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Add a new customer</h1>
+		</div>
+	</div>
+
+  <form>
+    <div class="form-group">
+      <label class="control-label" for="First Name">First Name</label>
+      <div class="controls">
+        <input type="text" name="firstName" placeholder="First Name" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="Last Name">Last Name</label>
+      <div class="controls">
+        <input type="text" name="lastName" placeholder="Last Name" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="Email">Email</label>
+      <div class="controls">
+        <input type="email" name="email" placeholder="Email" class="form-control" />
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>	
+  </form>
+	
+  <div class="row">
+		<div class="col-md-12">
+			<a id="btnCustomersList" href="#">Go back to customer list</a>
+		</div>
+	</div>
+</template>
