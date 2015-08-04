@@ -4,38 +4,32 @@ Meteor.startup(function() {
     Customers.insert({
       name: 'Fred',
       surname: "Amia",
-      email: 'freddy@example.com',
-      acquired: new Date(2015, 2, 23)
+      email: 'freddy@example.com'
     });
     Customers.insert({
       name: 'Bob',
       surname: 'Edelson',
-      email: 'edelson.bob@example.com',
-      acquired: new Date(2015, 3, 2)
+      email: 'edelson.bob@example.com'
     });
     Customers.insert({
       name: 'Dan',
       surname: "Carlson",
-      email: 'carlsondan@example.com',
-      acquired: new Date(2015, 2, 13)
+      email: 'carlsondan@example.com'
     });
     Customers.insert({
       name: 'Alice',
       surname: 'Foster',
-      email: 'a.foster@example.com',
-      acquired: new Date(2015, 4, 15)
+      email: 'a.foster@example.com'
     });
     Customers.insert({
       name: 'Erica',
       surname: "Breeson",
-      email: 'ericabreeson@example.com',
-      acquired: new Date(2015, 5, 5)
+      email: 'ericabreeson@example.com'
     });
     Customers.insert({
       name: 'Cindy',
       surname: 'Driver',
-      email: 'cindy.driver@example.com',
-      acquired: new Date(2015, 1, 25)
+      email: 'cindy.driver@example.com'
     });
   }
 });

@@ -1,9 +1,8 @@
-FindFromPublication.publish('customers', function(skipCount) {
-  var positiveIntegerCheck = Match.Where(function(x) {
-    check(x, Match.Integer);
-    return x >= 0;
-  });
-  check(skipCount, positiveIntegerCheck);
+FindFromPublication.publish('customers', function(skipCount, sortField, sortDirection) {
+  // parameter validations
+  check(skipCount, CustomChecks.positiveIntegerCheck);
+  check(sortField, CustomChecks.sortFieldCheck);
+  check(sortDirection, CustomChecks.sortDirectionCheck)
 
   Counts.publish(this, 'customerCount', Customers.find(), { 
     noReady: true
@@ -11,7 +10,8 @@ FindFromPublication.publish('customers', function(skipCount) {
   
   return Customers.find({}, {
     limit: parseInt(Meteor.settings.public.recordsPerPage),
-    skip: skipCount
+    skip: skipCount,
+    sort: CustomerSortSettings.getSortParams(sortField, sortDirection)
   });
 });
 

@@ -10,13 +10,31 @@
     {{> spinner}}
   {{/unless}}
 	<table class="table">
-		<thead>
-			<tr>
-				<th>First name</th>
-				<th>Last name</th>
-				<th>Email</th>
-			</tr>
-		</thead>
+    <thead>
+      <tr>
+        <th>
+          <a id="firstName" href="#">First name
+            <span>
+              <i class="{{firstNameIconClass}}"></i>
+            </span>
+          </a>
+        </th>
+        <th>
+          <a id="lastName" href="#">Last name
+            <span>
+              <i class="{{lastNameIconClass}}"></i>
+            </span>
+          </a>
+        </th>
+        <th>
+          <a id="email" href="#">Email
+            <span>
+              <i class="{{emailIconClass}}"></i>
+            </span>
+          </a>
+        </th>
+      </tr>
+    </thead>
 		<tbody>
 			{{#each customers}}
 				<tr>
